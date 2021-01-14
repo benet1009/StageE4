@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main"
+            android:name=".vue.TabLeTriangle"
+            android:label="@string/title_activity_tab_le_triangle"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".vue.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".vue.TabLaTalle"
             android:label="@string/title_activity_tab_la_talle"

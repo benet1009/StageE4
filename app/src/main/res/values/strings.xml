@@ -105,4 +105,5 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_tab_la_talle">TabLaTalle</string>
+    <string name="title_activity_tab_le_triangle">TabLeTriangle</string>
 </resources>

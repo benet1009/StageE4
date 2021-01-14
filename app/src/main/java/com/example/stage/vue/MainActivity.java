@@ -1,41 +1,37 @@
 package com.example.stage.vue;
 
-import android.graphics.Color;
 import android.os.Bundle;
 
-import com.example.stage.R;
-import com.example.stage.modele.Parcelle;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.stage.R;
+import com.example.stage.modele.Parcelle;
 
-public class TabLaTalle extends AppCompatActivity {
 
+public class MainActivity extends AppCompatActivity {
+
+    Spinner spinner;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab_la_talle);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        setContentView(R.layout.content_main);
         init();
     }
     private Spinner spCulture;
     private EditText NbSurface;
+    private EditText NbSurface1;
     private EditText txtTypeSol;
     private EditText txtTravailSol;
     private EditText txtSemis;
@@ -48,7 +44,8 @@ public class TabLaTalle extends AppCompatActivity {
     private EditText txtPhytos;
     private EditText nbIFT;
     private EditText nbCoupe1, nbCoupe2, nbCoupe3, nbCoupe4;
-    private TextView txtTbotte;
+    private EditText nbCoupe1_1, nbCoupe2_1, nbCoupe3_1, nbCoupe4_1;
+    private TextView txtTbotte, txtTbotte1;
     private EditText nbPoidsBotte;
     private TextView txtKGTotal;
     private EditText nbTauxMS;
@@ -59,6 +56,7 @@ public class TabLaTalle extends AppCompatActivity {
 
     private void init(){
         NbSurface = (EditText)findViewById(R.id.NbSurface);
+        NbSurface1 = (EditText)findViewById(R.id.NbSurface1);
         txtTypeSol = (EditText)findViewById(R.id.txtTypeSol);
         spCulture = (Spinner) findViewById(R.id.spCulture);
         txtTravailSol = (EditText)findViewById(R.id.txtTravailSol);
@@ -75,7 +73,12 @@ public class TabLaTalle extends AppCompatActivity {
         nbCoupe2 = (EditText)findViewById(R.id.nbCoupe2);
         nbCoupe3 = (EditText)findViewById(R.id.nbCoupe3);
         nbCoupe4 = (EditText)findViewById(R.id.nbCoupe4);
+        nbCoupe1_1 = (EditText)findViewById(R.id.nbCoupe1_1);
+        nbCoupe2_1 = (EditText)findViewById(R.id.nbCoupe2_1);
+        nbCoupe3_1 = (EditText)findViewById(R.id.nbCoupe3_1);
+        nbCoupe4_1 = (EditText)findViewById(R.id.nbCoupe4_1);
         txtTbotte = (TextView)findViewById(R.id.txtTbotte);
+        txtTbotte1 = (TextView)findViewById(R.id.txtTbotte1);
         nbPoidsBotte = (EditText)findViewById(R.id.nbPoidsBotte);
         txtKGTotal = (TextView)findViewById(R.id.txtKGTotal);
         nbTauxMS = (EditText)findViewById(R.id.nbTauxMS);
@@ -83,7 +86,8 @@ public class TabLaTalle extends AppCompatActivity {
         txtRMS = (TextView)findViewById(R.id.txtRMS);
 
         culture();
-        ecouteCalculBotteT();
+        ecouteCalculBotteT(nbCoupe1, nbCoupe2, nbCoupe3, nbCoupe4, txtTbotte);
+        ecouteCalculBotteT(nbCoupe1_1, nbCoupe2_1, nbCoupe3_1, nbCoupe4_1, txtTbotte1);
         ecouteCalculKGT();
         ecouteCalculMSR();
         ecouteCalculRMS();
@@ -114,7 +118,7 @@ public class TabLaTalle extends AppCompatActivity {
 
     }
 
-    private void ecouteCalculBotteT(){
+    private void ecouteCalculBotteT(final TextView c1, final TextView c2, final TextView c3, final TextView c4, final TextView txt){
         ((Button) findViewById(R.id.btnBotteT)).setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v){
                 Integer coupe1 = 0;
@@ -123,14 +127,20 @@ public class TabLaTalle extends AppCompatActivity {
                 Integer coupe4 = 0;
                 // récupération des données saisies
                 try {
-                    coupe1 = Integer.parseInt(nbCoupe1.getText().toString());
-                    coupe2 = Integer.parseInt(nbCoupe2.getText().toString());
-                    coupe3 = Integer.parseInt(nbCoupe3.getText().toString());
-                    coupe4 = Integer.parseInt(nbCoupe4.getText().toString());
+                    coupe1 = Integer.parseInt(c1.getText().toString());
+                    coupe2 = Integer.parseInt(c2.getText().toString());
+                    coupe3 = Integer.parseInt(c3.getText().toString());
+                    coupe4 = Integer.parseInt(c4.getText().toString());
                 }catch(Exception e){}
-                afficheResult1(coupe1,coupe2, coupe3, coupe4);
+                afficheResult1(coupe1,coupe2, coupe3, coupe4, txt);
             }
         });
+    }
+
+    private void afficheResult1(Integer coupe1,Integer coupe2,Integer coupe3,Integer coupe4, TextView txt){
+        p.resultat1(coupe1,coupe2, coupe3, coupe4);
+        Integer botteT = p.getBotteT();
+        txt.setText(String.valueOf(botteT));
     }
 
     private void ecouteCalculKGT(){
@@ -172,11 +182,8 @@ public class TabLaTalle extends AppCompatActivity {
         });
     }
 
-    private void afficheResult1(Integer coupe1,Integer coupe2,Integer coupe3,Integer coupe4){
-        p.resultat1(coupe1,coupe2, coupe3, coupe4);
-        Integer botteT = p.getBotteT();
-        txtTbotte.setText(String.valueOf(botteT));
-    }
+
+
 
     private void afficheResult2(float poidsBotte){
         p.resultat2(poidsBotte);
@@ -195,15 +202,5 @@ public class TabLaTalle extends AppCompatActivity {
         float RMS = p.getRMS();
         txtRMS.setText(String.valueOf(RMS));
     }
-   /* private void test(){
-        p.setBotteT(1);
-
-    }
-    private void tes(){
-        txtKGTotal.setText(String.valueOf(p.getBotteT()));
-    }*/
-
-
-
 
 }

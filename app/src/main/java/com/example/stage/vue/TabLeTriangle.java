@@ -1,6 +1,5 @@
 package com.example.stage.vue;
 
-import android.graphics.Color;
 import android.os.Bundle;
 
 import com.example.stage.R;
@@ -15,26 +14,24 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TabLaTalle extends AppCompatActivity {
+public class TabLeTriangle extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab_la_talle);
+        setContentView(R.layout.activity_tab_le_triangle);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         init();
     }
     private Spinner spCulture;
+    private Spinner spAnnee;
     private EditText NbSurface;
     private EditText txtTypeSol;
     private EditText txtTravailSol;
@@ -61,6 +58,7 @@ public class TabLaTalle extends AppCompatActivity {
         NbSurface = (EditText)findViewById(R.id.NbSurface);
         txtTypeSol = (EditText)findViewById(R.id.txtTypeSol);
         spCulture = (Spinner) findViewById(R.id.spCulture);
+        spAnnee = (Spinner) findViewById(R.id.spAnnee);
         txtTravailSol = (EditText)findViewById(R.id.txtTravailSol);
         txtSemis = (EditText)findViewById(R.id.txtSemis);
         txtCompost = (EditText)findViewById(R.id.txtCompost);
@@ -83,6 +81,7 @@ public class TabLaTalle extends AppCompatActivity {
         txtRMS = (TextView)findViewById(R.id.txtRMS);
 
         culture();
+        annee();
         ecouteCalculBotteT();
         ecouteCalculKGT();
         ecouteCalculMSR();
@@ -103,14 +102,37 @@ public class TabLaTalle extends AppCompatActivity {
         cultureList.add("Autre prairie");
         cultureList.add("Autre culture");
         cultureList.add("Jachère");
-    /*Le Spinner a besoin d'un adapter pour sa presentation alors on lui passe le context(this) et
-            un fichier de presentation par défaut( android.R.layout.simple_spinner_item)
-    Avec la liste des elements (exemple) */
+    //Le Spinner a besoin d'un adapter pour sa presentation alors on lui passe le context(this) et
+         //   un fichier de presentation par défaut( android.R.layout.simple_spinner_item)
+   // Avec la liste des elements (exemple)
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, cultureList);
-        /* On definit une présentation du spinner quand il est déroulé         (android.R.layout.simple_spinner_dropdown_item) */
+        // On definit une présentation du spinner quand il est déroulé         (android.R.layout.simple_spinner_dropdown_item)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Enfin on passe l'adapter au Spinner et c'est tout
         spCulture.setAdapter(adapter);
+
+    }
+
+    private void annee() {
+
+        //Récupération du Spinner déclaré dans le fichier xml
+        //Création d'une liste d'élément à mettre dans le Spinner
+        List anneeList = new ArrayList();
+        anneeList.add("2021");
+        anneeList.add("2022");
+        anneeList.add("2023");
+        anneeList.add("2024");
+        anneeList.add("2025");
+        anneeList.add("2026");
+        anneeList.add("2027");
+    //Le Spinner a besoin d'un adapter pour sa presentation alors on lui passe le context(this) et
+    //   un fichier de presentation par défaut( android.R.layout.simple_spinner_item)
+    //Avec la liste des elements (exemple)
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, anneeList);
+        // On definit une présentation du spinner quand il est déroulé         (android.R.layout.simple_spinner_dropdown_item)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Enfin on passe l'adapter au Spinner et c'est tout
+        spAnnee.setAdapter(adapter);
 
     }
 
@@ -195,15 +217,4 @@ public class TabLaTalle extends AppCompatActivity {
         float RMS = p.getRMS();
         txtRMS.setText(String.valueOf(RMS));
     }
-   /* private void test(){
-        p.setBotteT(1);
-
-    }
-    private void tes(){
-        txtKGTotal.setText(String.valueOf(p.getBotteT()));
-    }*/
-
-
-
-
 }

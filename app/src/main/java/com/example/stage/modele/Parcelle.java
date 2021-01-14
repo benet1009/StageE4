@@ -19,6 +19,7 @@ public class Parcelle {
     private float MSR;
     private float RMS;
 
+
     /*public Parcelle(float surface, String typeSol, String culture, String travailSol, String semis, String compost, String engrais, String phytos, Integer IFT, Integer coupe1, Integer coupe2, Integer coupe3, Integer botteT, float poidsBotte, float kgTotal, float tauxMS, float MSR, float RMS) {
         this.surface = surface;
         this.typeSol = typeSol;
@@ -114,19 +115,22 @@ public class Parcelle {
 
 
 
-    public void setBotteT(Integer botteT) {
+    /*public void setBotteT(Integer botteT) {
         this.botteT = botteT;
-    }
+    }*/
 
     public void resultat1(Integer coupe1,Integer coupe2,Integer coupe3,Integer coupe4){
         this.botteT = coupe1 + coupe2 + coupe3 + coupe4;
     }
+
     public void resultat2(float poidsBotte){
         this.kgTotal = this.getBotteT() * poidsBotte;
     }
+
     public void resultat3(float tauxMS) {
         this.MSR = this.getKgTotal() * (tauxMS/100);
     }
+
     public void resultat4(float surface) {
         this.RMS = this.getMSR() / surface;
     }

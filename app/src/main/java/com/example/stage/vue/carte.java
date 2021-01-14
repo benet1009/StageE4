@@ -3,7 +3,6 @@ package com.example.stage.vue;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.stage.MainActivity;
 import com.example.stage.R;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
@@ -26,6 +25,7 @@ public class carte extends AppCompatActivity {
 
         ecouteAccueil((Button)findViewById(R.id.btnLaTalle), TabLaTalle.class);
         ecouteAccueil((Button)findViewById(R.id.btnLesClasses), MainActivity.class);
+        ecouteAccueil((Button)findViewById(R.id.btnLeTriangle), TabLeTriangle.class);
 
     }
     private void ecouteAccueil(Button btn, final Class classe){
