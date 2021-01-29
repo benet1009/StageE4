@@ -24,8 +24,15 @@ public class carte extends AppCompatActivity {
         toolBarLayout.setTitle(getTitle());
 
         ecouteAccueil((Button)findViewById(R.id.btnLaTalle), TabLaTalle.class);
-        ecouteAccueil((Button)findViewById(R.id.btnLesClasses), MainActivity.class);
+        ecouteAccueil((Button)findViewById(R.id.btnLesClasses), TabLesClasses.class);
         ecouteAccueil((Button)findViewById(R.id.btnLeTriangle), TabLeTriangle.class);
+        ecouteAccueil((Button)findViewById(R.id.btnLeHangar), LeHangar.class);
+        ecouteAccueil((Button)findViewById(R.id.btnFBrenne), FishBrenne.class);
+        ecouteAccueil((Button)findViewById(R.id.btnVFetuque), VeilleFetuque.class);
+        ecouteAccueil((Button)findViewById(R.id.btnLeRocher), LeRocher.class);
+        ecouteAccueil((Button)findViewById(R.id.btnPBassin), PetitBassin.class);
+        ecouteAccueil((Button)findViewById(R.id.btnAerodrome), Aerodrome.class);
+        ecouteAccueil((Button)findViewById(R.id.btnLacombe), Lacombe.class);
 
     }
     private void ecouteAccueil(Button btn, final Class classe){

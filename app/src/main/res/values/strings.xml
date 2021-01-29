@@ -10,6 +10,30 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_carte">ScrollingActivity</string>
+
+    <string-array name="culture">
+        <item>Luzerne</item>
+        <item>Trèfle violet</item>
+        <item>RGI</item>
+        <item>Fétuque</item>
+        <item>Autre prairie</item>
+        <item>Autre culture</item>
+        <item>Jachère</item>
+    </string-array>
+
+    <string-array name="annee">
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item>2028</item>
+        <item>2029</item>
+        <item>2030</item>
+    </string-array>
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -106,4 +130,12 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_tab_la_talle">TabLaTalle</string>
     <string name="title_activity_tab_le_triangle">TabLeTriangle</string>
+    <string name="title_activity_tab_les_classes">TabLesClasses</string>
+    <string name="title_activity_le_rocher">LeRocher</string>
+    <string name="title_activity_le_hangar">LeHangar</string>
+    <string name="title_activity_fish_brenne">FishBrenne</string>
+    <string name="title_activity_veille_fetuque">VeilleFetuque</string>
+    <string name="title_activity_petit_bassin">PetitBassin</string>
+    <string name="title_activity_aerodrome">Aerodrome</string>
+    <string name="title_activity_lacombe">Lacombe</string>
 </resources>

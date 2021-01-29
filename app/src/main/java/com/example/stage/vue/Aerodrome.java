@@ -1,5 +1,6 @@
 package com.example.stage.vue;
 
+
 import android.os.Bundle;
 import com.example.stage.R;
 import com.example.stage.modele.Parcelle;
@@ -17,7 +18,8 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class TabLaTalle extends AppCompatActivity {
+
+public class Aerodrome extends AppCompatActivity {
 
     private Spinner spCulture, spAnnee, SPAnnee;
     private EditText NbSurface, txtTypeSol, txtTravailSol, txtSemis, txtCompost, nbtxtN, nbtxtP, nbtxtK, nbtxtS, nbtxtCA, txtPhytos, txtPhytos2, nbIFT, nbCoupe1, nbCoupe2, nbCoupe3, nbCoupe4, nbPoidsBotte, nbTauxMS;
@@ -27,11 +29,14 @@ public class TabLaTalle extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab_la_talle);
+        setContentView(R.layout.activity_aerodrome);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         init();
+
+
     }
+
     private void init(){
         NbSurface = findViewById(R.id.NbSurface);
         txtTypeSol = findViewById(R.id.txtTypeSol);
@@ -101,6 +106,7 @@ public class TabLaTalle extends AppCompatActivity {
             public void onClick(View view) {
                 final String annee = SPAnnee(SPAnnee);
 
+                if (!annee.equals("")) {  //verifie si toute les valeurs sont ecrite
                     Handler handler = new Handler(Looper.getMainLooper());
                     handler.post(new Runnable() {
                         @Override
@@ -111,7 +117,7 @@ public class TabLaTalle extends AppCompatActivity {
 
                             String[] data = new String[1];//Création d un tableau pour les données
                             data[0] = annee;
-                            PutData putData = new PutData("http://192.168.43.81/LesAges/LaTalle.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.43.81/LesAges/Aerodrome.php", "POST", field, data);
 
                             if (putData.startPut()) {//envoie de l année pour la requete
 
@@ -186,7 +192,9 @@ public class TabLaTalle extends AppCompatActivity {
                             }
                         }
                     });
-
+                } else {
+                    Toast.makeText(getApplicationContext(), "All fields required", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -197,7 +205,7 @@ public class TabLaTalle extends AppCompatActivity {
                 final String surface, botteT, typeSol, travailSol, Semis, N, P, K, S, CA, compost, phytos, phytos2, IFT, coupe1, coupe2, coupe3, coupe4, poidsBotte, kgTotal, tauxMS, MSR, RMS;
                 final String annee = SPAnnee(spAnnee);
                 final String culture =  SPCulture();
-                final String nom = "La Talle";
+                final String nom = "Aerodrome";
 
                 //prend la valeur qui a ete ecrite dans l application
                 surface = String.valueOf(NbSurface.getText());
@@ -286,7 +294,7 @@ public class TabLaTalle extends AppCompatActivity {
                             data[24] = MSR;
                             data[25] = RMS;
 
-                            PutData putData = new PutData("http://192.168.43.81/LesAges/envoieTalle.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.43.81/LesAges/envoieAerodrome.php", "POST", field, data);
                             if (putData.startPut()) {//envoie de toute les données
                                 if (putData.onComplete()) {//si toute les donnée sont acquise
                                     String result = putData.getResult();//recupere le resultat cad le echo du php
@@ -399,6 +407,8 @@ public class TabLaTalle extends AppCompatActivity {
     }
 
 
+
+
     private void afficheResult1(Integer coupe1,Integer coupe2,Integer coupe3,Integer coupe4){
         p.resultat1(coupe1,coupe2, coupe3, coupe4);
         Integer botteT = p.getBotteT();
@@ -422,4 +432,6 @@ public class TabLaTalle extends AppCompatActivity {
         float RMS = p.getRMS();
         txtRMS.setText(String.valueOf(RMS));
     }
+
+
 }

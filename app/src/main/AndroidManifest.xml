@@ -2,28 +2,59 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.stage">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".vue.TabLeTriangle"
-            android:label="@string/title_activity_tab_le_triangle"
+            android:name=".vue.Lacombe"
+            android:label="Lacombe"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".vue.MainActivity"
-            android:label="@string/title_activity_main"
+            android:name=".vue.Aerodrome"
+            android:label="Aérodrome"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vue.PetitBassin"
+            android:label="Petit Bassin"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vue.VeilleFetuque"
+            android:label="Veille Fétuque"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vue.FishBrenne"
+            android:label="Fish Brenne"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vue.LeHangar"
+            android:label="Le Hangar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vue.LeRocher"
+            android:label="Le Rocher"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vue.TabLesClasses"
+            android:label="Les Classes"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vue.TabLeTriangle"
+            android:label="Le Triangle"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".vue.TabLaTalle"
-            android:label="@string/title_activity_tab_la_talle"
+            android:label="La Talle"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".vue.carte"
-            android:label="@string/title_activity_carte"
+            android:label="Accueille"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

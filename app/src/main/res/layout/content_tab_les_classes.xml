@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -1004,5 +1005,6 @@
         </HorizontalScrollView>
 
     </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

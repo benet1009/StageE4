@@ -24,14 +24,15 @@
                 android:orientation="vertical">
 
                 <TableLayout
-                    android:id="@+id/tabla_cuerpo1"
+                    android:id="@+id/TableLayout1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
 
                     <TableRow
                         android:id="@+id/tableRow1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="45dp">
 
                         <TextView
                             android:id="@+id/textView4566"
@@ -46,56 +47,60 @@
                         <TextView
                             android:id="@+id/textView165445"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
 
-                        <TextView
-                            android:id="@+id/textView2654"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:text="2021"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                        <Spinner
+                            android:id="@+id/spAnnee"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:entries="@array/annee" />
 
-                        <TextView
-                            android:id="@+id/textView1qs2"
+                        <TableLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:text="2022"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="45dp">
 
-                        <TextView
-                            android:id="@+id/textView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2023" />
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp">
+
+                                <Spinner
+                                    android:id="@+id/SPAnnee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="45dp"
+                                    android:entries="@array/annee" />
+
+                                <Button
+                                    android:id="@+id/btnAffichage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="45dp"
+                                    android:text="Affichage" />
+                            </TableRow>
+                        </TableLayout>
 
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow16"
+                        android:id="@+id/tableRow2"
                         android:layout_width="match_parent"
-                        android:layout_height="114dp">
+                        android:layout_height="45dp">
 
                         <TextView
                             android:id="@+id/textView6"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
-                            android:text="surface (ha)"
+                            android:text="Surface (ha)"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
 
                         <TextView
                             android:id="@+id/textView16"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -103,84 +108,27 @@
                         <EditText
                             android:id="@+id/NbSurface"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="45dp"
                             android:ems="10"
                             android:inputType="numberDecimal" />
 
-                        <EditText
-                            android:id="@+id/NbSurface1"
+                        <TextView
+                            android:id="@+id/affSurface"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="textPersonName" />
-
-                        <EditText
-                            android:id="@+id/txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <EditText
-                            android:id="@+id/editTextNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <EditText
-                            android:id="@+id/editTextNumber2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <EditText
-                            android:id="@+id/editTextNumber3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <EditText
-                            android:id="@+id/editTextNumber4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <EditText
-                            android:id="@+id/editTextNumber5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <EditText
-                            android:id="@+id/editTextNumber6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <EditText
-                            android:id="@+id/editTextNumber7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow27"
+                        android:id="@+id/tableRow3"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView47"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="Type de sol"
@@ -189,7 +137,7 @@
                         <TextView
                             android:id="@+id/textView37"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -197,29 +145,28 @@
                         <EditText
                             android:id="@+id/txtTypeSol"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="45dp"
                             android:ems="10"
                             android:inputType="textPersonName"
                             android:text="" />
 
                         <TextView
-                            android:id="@+id/textView57"
+                            android:id="@+id/affTypeSol"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
+
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow31"
+                        android:id="@+id/tableRow4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView751"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="culture en place"
@@ -236,35 +183,27 @@
                         <Spinner
                             android:id="@+id/spCulture"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-
-                        <EditText
-                            android:id="@+id/txtculture"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="textPersonName"
-                            android:text="" />
+                            android:layout_height="match_parent"
+                            android:entries="@array/culture" />
 
                         <TextView
-                            android:id="@+id/textView691"
+                            android:id="@+id/affCulture"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
+
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow40"
+                        android:id="@+id/tableRow5"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView6660"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="Travail du sol"
@@ -273,7 +212,7 @@
                         <TextView
                             android:id="@+id/textView950"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -287,24 +226,22 @@
                             android:text="" />
 
                         <TextView
-                            android:id="@+id/textView100"
+                            android:id="@+id/affTravailSol"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow29999"
+                        android:id="@+id/tableRow6"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView49999999"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="Semis"
@@ -313,7 +250,7 @@
                         <TextView
                             android:id="@+id/textView39"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -327,23 +264,22 @@
                             android:text="" />
 
                         <TextView
-                            android:id="@+id/textView59"
+                            android:id="@+id/affSemis"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
+
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow397"
+                        android:id="@+id/tableRow7"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView7597"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="Compost"
@@ -352,7 +288,7 @@
                         <TextView
                             android:id="@+id/textView964"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -366,24 +302,22 @@
                             android:text="" />
 
                         <TextView
-                            android:id="@+id/textView6945"
+                            android:id="@+id/affCompost"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow45"
+                        android:id="@+id/tableRow8"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView955"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="Engrais/amendemant"
@@ -399,84 +333,27 @@
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
 
                         <EditText
-                            android:id="@+id/nbN"
+                            android:id="@+id/nbtxtN"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:inputType="number" />
 
+                        <TextView
+                            android:id="@+id/affN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow3"
+                        android:id="@+id/tableRow9"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView75"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
-
-                        <TextView
-                            android:id="@+id/textView96"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:text="P"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
-
-                        <EditText
-                            android:id="@+id/nbP"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <TextView
-                            android:id="@+id/textView69"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:id="@+id/tableRow4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/textView666"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
-
-                        <TextView
-                            android:id="@+id/textView95"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:text="K"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
-
-                        <EditText
-                            android:id="@+id/nbK"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <TextView
-                            android:id="@+id/textView10"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:background="#ffffff"
@@ -484,60 +361,75 @@
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
 
                         <TextView
-                            android:id="@+id/textView1qs"
+                            android:id="@+id/textView96"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
-                            android:text="TextView"
+                            android:text="P"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
 
-                        <TextView
-                            android:id="@+id/textView2qs"
+                        <EditText
+                            android:id="@+id/nbtxtP"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:text="TextView"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:ems="10"
+                            android:inputType="number" />
 
                         <TextView
-                            android:id="@+id/textViewds"
+                            android:id="@+id/affP"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:text="TextView"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
-                        <TextView
-                            android:id="@+id/textView1ds"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:text="TextView"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
-
-                        <TextView
-                            android:id="@+id/textView2dsq"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:text="TextView"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow164"
+                        android:id="@+id/tableRow10"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/textView666"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#ffffff"
+                            android:padding="5dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+
+                        <TextView
+                            android:id="@+id/textView95"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#ffffff"
+                            android:padding="5dp"
+                            android:text="K"
+                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+
+                        <EditText
+                            android:id="@+id/nbtxtK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="number" />
+
+                        <TextView
+                            android:id="@+id/affK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow11"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView64"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -545,38 +437,36 @@
                         <TextView
                             android:id="@+id/textView164"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="S"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
 
                         <EditText
-                            android:id="@+id/nbS"
+                            android:id="@+id/nbtxtS"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:inputType="number" />
 
                         <TextView
-                            android:id="@+id/textView264"
+                            android:id="@+id/affS"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow16446"
+                        android:id="@+id/tableRow12"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView64789"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -584,38 +474,36 @@
                         <TextView
                             android:id="@+id/textView164852"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="CA"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
 
                         <EditText
-                            android:id="@+id/nbCA"
+                            android:id="@+id/nbtxtCA"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:inputType="number" />
 
                         <TextView
-                            android:id="@+id/textView2640"
+                            android:id="@+id/affCA"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow246"
+                        android:id="@+id/tableRow13"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView446"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="Phytos"
@@ -624,7 +512,7 @@
                         <TextView
                             android:id="@+id/textView346"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -638,23 +526,60 @@
                             android:text="" />
 
                         <TextView
-                            android:id="@+id/textView546"
+                            android:id="@+id/affPhytos"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
+
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow34466"
+                        android:id="@+id/tableRow14"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#ffffff"
+                            android:padding="5dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#ffffff"
+                            android:padding="5dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+
+                        <EditText
+                            android:id="@+id/txtPhytos2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/affPhytos2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow15"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView7566644"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="IFT"
@@ -663,7 +588,7 @@
                         <TextView
                             android:id="@+id/textView96664"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -676,24 +601,22 @@
                             android:inputType="number" />
 
                         <TextView
-                            android:id="@+id/textView6964"
+                            android:id="@+id/affIFT"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow454"
+                        android:id="@+id/tableRow16"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView66654"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="Récolte/rendement"
@@ -702,12 +625,11 @@
                         <TextView
                             android:id="@+id/textView9554"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="1 coupe"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
-
 
 
                         <EditText
@@ -717,32 +639,23 @@
                             android:ems="10"
                             android:inputType="number" />
 
-                        <EditText
-                            android:id="@+id/nbCoupe1_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
                         <TextView
-                            android:id="@+id/textView1054"
+                            android:id="@+id/affCoupe1"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow4545"
+                        android:id="@+id/tableRow17"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView666545"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -750,7 +663,7 @@
                         <TextView
                             android:id="@+id/textView95547"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="2 coupe"
@@ -763,32 +676,23 @@
                             android:ems="10"
                             android:inputType="number" />
 
-                        <EditText
-                            android:id="@+id/nbCoupe2_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
                         <TextView
-                            android:id="@+id/textView10546"
+                            android:id="@+id/affCoupe2"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow4546"
+                        android:id="@+id/tableRow18"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView666542"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -796,7 +700,7 @@
                         <TextView
                             android:id="@+id/textView95548"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="3 coupe"
@@ -809,32 +713,24 @@
                             android:ems="10"
                             android:inputType="number" />
 
-                        <EditText
-                            android:id="@+id/nbCoupe3_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
                         <TextView
-                            android:id="@+id/textView105464"
+                            android:id="@+id/affCoupe3"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
+
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow4545d"
+                        android:id="@+id/tableRow19"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView666545d"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -842,7 +738,7 @@
                         <TextView
                             android:id="@+id/textView95547d"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="4 coupe"
@@ -855,32 +751,23 @@
                             android:ems="10"
                             android:inputType="number" />
 
-                        <EditText
-                            android:id="@+id/nbCoupe4_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
                         <TextView
-                            android:id="@+id/textView10546d"
+                            android:id="@+id/affCoupe4"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow4548"
+                        android:id="@+id/tableRow20"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView666547"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="Matière Brut"
@@ -895,27 +782,25 @@
                         <TextView
                             android:id="@+id/txtTbotte"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="match_parent" />
 
                         <TextView
-                            android:id="@+id/textView10545"
+                            android:id="@+id/affTBotte"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow45469"
+                        android:id="@+id/tableRow21"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView666546"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -923,7 +808,7 @@
                         <TextView
                             android:id="@+id/textView95546"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="Poids des Bottes"
@@ -936,39 +821,23 @@
                             android:ems="10"
                             android:inputType="numberDecimal" />
 
-                        <EditText
-                            android:id="@+id/nbPoidsBotte1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="textPersonName" />
-
-                        <EditText
-                            android:id="@+id/txt2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
                         <TextView
-                            android:id="@+id/textView105469"
+                            android:id="@+id/affPoidsBotte"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow4549"
+                        android:id="@+id/tableRow22"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView666549"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -982,28 +851,25 @@
                         <TextView
                             android:id="@+id/txtKGTotal"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:layout_height="match_parent" />
 
                         <TextView
-                            android:id="@+id/textView10549"
+                            android:id="@+id/affKGTotal"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow45401"
+                        android:id="@+id/tableRow23"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView66654100"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:text="Matière Sèche"
@@ -1025,32 +891,23 @@
                             android:ems="10"
                             android:inputType="numberDecimal" />
 
-                        <EditText
-                            android:id="@+id/nbTauxMS1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="number" />
-
                         <TextView
-                            android:id="@+id/textView10541"
+                            android:id="@+id/affTauxMS"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow4541"
+                        android:id="@+id/tableRow24"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView6665401"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -1064,28 +921,25 @@
                         <TextView
                             android:id="@+id/txtMSR"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:layout_height="match_parent" />
 
                         <TextView
-                            android:id="@+id/textView105400"
+                            android:id="@+id/affMSR"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow4540"
+                        android:id="@+id/tableRow25"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView666540"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -1099,28 +953,25 @@
                         <TextView
                             android:id="@+id/txtRMS"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:layout_height="match_parent" />
 
                         <TextView
-                            android:id="@+id/textView10540"
+                            android:id="@+id/affRMS"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="#ffffff"
-                            android:padding="5dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+                            android:layout_height="match_parent" />
 
                     </TableRow>
 
                     <TableRow
-                        android:id="@+id/tableRow45400"
+                        android:id="@+id/tableRow26"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/textView765"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -1128,7 +979,7 @@
                         <TextView
                             android:id="@+id/textView7895"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="#ffffff"
                             android:padding="5dp"
                             android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
@@ -1139,8 +990,12 @@
                             android:layout_height="wrap_content"
                             android:text="Envoie" />
 
-                    </TableRow>
+                        <TextView
+                            android:id="@+id/textView28"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
 
+                    </TableRow>
 
 
                 </TableLayout>
