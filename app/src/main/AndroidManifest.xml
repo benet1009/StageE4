@@ -13,9 +13,23 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".vue.Visiteur"
+            android:label="Information parcelle"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".vue.login"
+            android:label="Connection"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".vue.Lacombe"
             android:label="Lacombe"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".vue.Aerodrome"
             android:label="Aérodrome"
@@ -55,13 +69,7 @@
         <activity
             android:name=".vue.carte"
             android:label="Accueille"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

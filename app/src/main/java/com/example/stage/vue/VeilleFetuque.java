@@ -198,7 +198,7 @@ public class VeilleFetuque extends AppCompatActivity {
                 final String surface, botteT, typeSol, travailSol, Semis, N, P, K, S, CA, compost, phytos, phytos2, IFT, coupe1, coupe2, coupe3, coupe4, poidsBotte, kgTotal, tauxMS, MSR, RMS;
                 final String annee = SPAnnee(spAnnee);
                 final String culture =  SPCulture();
-                final String nom = "Veille Fetuque";
+                final String nom = "Vieille Fetuque";
 
                 //prend la valeur qui a ete ecrite dans l application
                 surface = String.valueOf(NbSurface.getText());
