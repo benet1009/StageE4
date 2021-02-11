@@ -3,18 +3,14 @@ package com.example.stage.vue;
 import android.os.Bundle;
 
 import com.example.stage.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.vishnusivadas.advanced_httpurlconnection.PutData;
+import com.example.stage.controleur.PutData;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
