@@ -113,7 +113,7 @@ public class PetitBassin extends AppCompatActivity {
 
                             String[] data = new String[1];//Création d un tableau pour les données
                             data[0] = annee;
-                            PutData putData = new PutData("http://192.168.43.81/LesAges/PetitBassin.php", "POST", field, data);
+                            PutData putData = new PutData("http://sc1chfl1498.universe.wf/Equ26K7z/LesAges/PetitBassin.php", "POST", field, data);
 
                             if (putData.startPut()) {//envoie de l année pour la requete
 
@@ -288,11 +288,11 @@ public class PetitBassin extends AppCompatActivity {
                             data[24] = MSR;
                             data[25] = RMS;
 
-                            PutData putData = new PutData("http://192.168.43.81/LesAges/envoieBassin.php", "POST", field, data);
+                            PutData putData = new PutData("http://sc1chfl1498.universe.wf/Equ26K7z/LesAges/envoieBassin.php", "POST", field, data);
                             if (putData.startPut()) {//envoie de toute les données
                                 if (putData.onComplete()) {//si toute les donnée sont acquise
                                     String result = putData.getResult();//recupere le resultat cad le echo du php
-                                    if(result.equals("Envoie reussi")){
+                                    if(result.equals("Envoi reussi")){
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                     }
                                     else {
@@ -322,8 +322,7 @@ public class PetitBassin extends AppCompatActivity {
         if (spinner.getSelectedItem().toString().equals("2028"))      annee = "2028";
         if (spinner.getSelectedItem().toString().equals("2029"))      annee = "2029";
         if (spinner.getSelectedItem().toString().equals("2030"))      annee = "2030";
-
-
+        
         return annee;//renvoie l'annee sélectionner dans le spinner
 
     }

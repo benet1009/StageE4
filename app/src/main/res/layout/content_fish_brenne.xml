@@ -988,7 +988,7 @@
                             android:id="@+id/btnEnvoie"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Envoie" />
+                            android:text="Envoi" />
 
                         <TextView
                             android:id="@+id/textView28"

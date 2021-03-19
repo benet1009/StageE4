@@ -114,7 +114,7 @@ public class LeRocher extends AppCompatActivity {
 
                             String[] data = new String[1];//Création d un tableau pour les données
                             data[0] = annee;
-                            PutData putData = new PutData("http://192.168.43.81/LesAges/LeRocher.php", "POST", field, data);
+                            PutData putData = new PutData("http://sc1chfl1498.universe.wf/Equ26K7z/LesAges/LeRocher.php", "POST", field, data);
 
                             if (putData.startPut()) {//envoie de l année pour la requete
 
@@ -289,11 +289,11 @@ public class LeRocher extends AppCompatActivity {
                             data[24] = MSR;
                             data[25] = RMS;
 
-                            PutData putData = new PutData("http://192.168.43.81/LesAges/envoieRocher.php", "POST", field, data);
+                            PutData putData = new PutData("http://sc1chfl1498.universe.wf/Equ26K7z/LesAges/envoieRocher.php", "POST", field, data);
                             if (putData.startPut()) {//envoie de toute les données
                                 if (putData.onComplete()) {//si toute les donnée sont acquise
                                     String result = putData.getResult();//recupere le resultat cad le echo du php
-                                    if(result.equals("Envoie reussi")){
+                                    if(result.equals("Envoi reussi")){
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                     }
                                     else {
