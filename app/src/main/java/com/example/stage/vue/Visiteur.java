@@ -87,7 +87,7 @@ public class Visiteur extends AppCompatActivity {
                         data[1] = nom;
 
 
-                        PutData putData = new PutData("http://192.168.43.81/LesAges/visiteur.php", "POST", field, data);
+                        PutData putData = new PutData("http://sc1chfl1498.universe.wf/Equ26K7z/LesAges/visiteur.php", "POST", field, data);
 
                         if (putData.startPut()) {//envoie de l année pour la requete
 
