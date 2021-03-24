@@ -18,7 +18,7 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".vue.login"
-            android:label="Connection"
+            android:label="Les Ages"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,7 +68,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".vue.carte"
-            android:label="Accueille"
+            android:label="Accueil"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
